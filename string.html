@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String method</title>
+</head>
+<body>
+    <h1>String method Assignment</h1>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="vin"></li>
+        <li class="str-met1"></li>
+        <li class="str-met2"></li>
+        <li class="str-met3"></li>
+        <li class="str-met4"></li>
+        <li id="met1"></li>
+        <li id="met2"></li>
+        <li id="met3"></li>
+        
+        
+    </ul>
+</body>
+    <script>
+        const sentence =  "JavaScript is a versatile programming language."
+        const lists = document.querySelectorAll('ul li')
+        
+        // Length of the Sentence
+        lists[0].textContent = `The length of the sentence is: ${sentence.length}`
+
+        // Sentence to lowercase letters
+        lists[1].textContent = sentence.toLocaleLowerCase()
+        
+        // Extracting versatile frm the sentence
+        lists[2].textContent = sentence.slice(16, 25)
+
+        // Replacing JavaScript with Python in the sentence
+        lists[3].textContent = sentence.replace('JavaScript', 'Python')
+
+        lists[4].textContent = `endsWithLanguage?: ${sentence.includes('language.')}`
+
+        // Is programming in the sentence?
+        document.querySelector('.vin').textContent = `Index of the word programming is: ${sentence.indexOf('programming')}`
+
+        // Getting the first 10 characters of the sentence
+        document.getElementsByClassName('str-met1')[0].textContent = `The first 10 characters is: ${sentence.slice(0, 11)}`
+
+        // If the sentence ends with language
+        document.getElementsByClassName('str-met2')[0].textContent = 'Does the string ends with "language": ' + sentence.endsWith('language.')
+        document.getElementsByClassName('str-met3')[0].textContent =  `sentenceArray: ${sentence.split(' ')}`
+        document.getElementsByClassName('str-met4')[0].textContent = `trimmedSentence: ${sentence.trimStart().trimEnd()}`  
+        document.getElementById('met1').textContent = `repeatSentenceTwice: ${sentence + " " + sentence}`
+        document.getElementById('met2').textContent = `lastEightCharacterInSentence: ${sentence.slice(-8)}`
+        document.getElementById('met3').textContent = `replacedAllLetterA: ${sentence.replaceAll('a', '@')}`
+        
+
+
+
+
+
+
+
+
+    </script>
+</html>
